@@ -1,0 +1,10 @@
+<h1>Generate a ID</h1>
+
+<%= form_with url: "/unique_identifiers", method: :post do |form| %>
+  <%= form.submit "Generate" %>
+<% end %>
+
+<% if flash[:new_id] %>
+<h3><%= flash[:new_id] %></h3>
+<%= link_to 'Open story of kindness', unique_identifier_path(flash[:new_id]) %>
+<% end %>

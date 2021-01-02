@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+
+<%= image_tag(@act.image) %>
+<p>
+  <strong>Giver:</strong>
+  <%= @act.giver %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @act.message %>
+</p>
+
+<p>
+  <strong>Instagram username:</strong>
+  <%= @act.instagram_username %>
+</p>
+
+<%= link_to 'Edit', edit_uid_act_path(@act) %> |
