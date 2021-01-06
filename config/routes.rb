@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
   root 'application#index'
   # resources :acts
-  resources :unique_identifiers, param: :unique_id
-  
+
   scope :unique_identifiers, module: 'unique_identifiers', as: 'uid' do
     resources :acts
   end
+  resources :unique_identifiers, param: :unique_id
+
+  get '/finduid', to: 'application#find'
 
   # resources :unique_identifiers, param: :unique_id
 

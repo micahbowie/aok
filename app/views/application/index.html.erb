@@ -1,4 +1,52 @@
-<h1>Welcome to Project 'A OK'!</h1>
+<div class="p-3 m-5">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-5 col-sm-12 h-25">
+          <%= image_tag("a-ok small", alt: "A-ok logo") %>
+        </div>
+        <div class="col-md-7 col-sm-12">
+          <h6>Welcome to project</h6>
+          <h1>Act of Kindness</h1>
+          <p>
+            Project Act of Kindness is all about giving and making a difference. Start a single act of kindness and see how far it goes, as others take the challenge and continue the act of kindess. One small hesture can start a story of hope and love.
+          </p>
+          <button class="btn btn-light px-5 py-2 primary-btn">
+            Start an a Story of Kindness
+          </button>
+        </div>
+      </div>
+    </div>
+</div>
 
-<%= link_to 'See acts of kindness', uid_acts_path %>
-<%= link_to 'Create a new Act of kindness', new_unique_identifier_path %>
+<div class="p-5 m-5">
+<section class="section-1">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-md-6 col-12">
+            <div class="p-5">
+              <p>Did you recieve a random act of kindness?
+                Want to check on your story of kindness?
+                Use the search below to find what you are looking for.
+                Search by the unique ID(ie. "AOK-ghfew003"). </p>
+              </div>
+            </div>
+          <div class="col-md-6 col-12">
+          <div class="m-4">
+            <h1>Find an Act of Kindess</h1>
+          </div>
+          <form action="/finduid" method= "get">
+              <input type="text" name="search" class="search-query form-control" placeholder="ie. 'AOK-jhds002'" />
+              <span class="input-group-btn">
+          </form>
+          </div>
+        </div>
+      </div>
+   </section>
+</div>
+
+
+<div class="p-5 m-5">
+  <section class="section-2">
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-md-6 col-12">

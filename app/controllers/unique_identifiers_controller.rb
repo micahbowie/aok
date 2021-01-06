@@ -9,9 +9,10 @@ class UniqueIdentifiersController < ApplicationController
   end
 
   def show
-    
+
     @act = Act.new
     @id = UniqueIdentifier.find_by(unique_id: params[:unique_id])
+    @id_acts = @id.acts
   end
 
 end

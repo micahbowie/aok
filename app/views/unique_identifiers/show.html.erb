@@ -3,3 +3,15 @@
 <p><%= "AOK-" + @id.unique_id %></p>
 
 <%= render 'form', act: @act %>
+
+<% if @id_acts != nil %>
+<% @id_acts.each do |act| %>
+<br>
+<ul>
+  <li>
+    <p> <%= act.message %><%= link_to "See this act in detail" , uid_act_path(act) %></p>
+  </li>
+</ul>
+<br>
+<% end %>
+<% end %>

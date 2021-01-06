@@ -2,7 +2,8 @@ require 'securerandom'
 
 class UniqueIdentifier < ApplicationRecord
   has_many :acts, dependent: :destroy
-  # accepts_nested_attributes_for :acts
+  validates :unique_id,      presence: true
+
   @@count = 001
 
   def generate_id
@@ -12,5 +13,13 @@ class UniqueIdentifier < ApplicationRecord
     self.unique_id = @unique_id
     self.save
   end
+
+  def self.search(search_term)
+   if search_term
+     where(["unique_id LIKE ?", "%#{search_term}%"])
+   else
+     all
+   end
+ end
 
 end

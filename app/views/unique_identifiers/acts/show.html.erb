@@ -1,7 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-
-<%= image_tag(@act.image) %>
+<% if @act.image == nil %>
+  <%= image_tag(@act.image) %>
+<% end %>
 <p>
   <strong>Giver:</strong>
   <%= @act.giver %>

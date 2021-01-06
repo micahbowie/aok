@@ -20,9 +20,8 @@
         <td><%= act.giver %></td>
         <td><%= act.message %></td>
         <td><%= act.instagram_username %></td>
-        <td><%= link_to 'Show', act %></td>
-        <td><%= link_to 'Edit', edit_act_path(act) %></td>
-        <td><%= link_to 'Destroy', act, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', uid_acts_path %></td>
+        <td><%= link_to 'Edit', edit_uid_act_path(act) %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +29,4 @@
 
 <br>
 
-<%= link_to 'New Act', new_act_path %>
+<%= link_to 'New Act', new_uid_act_path %>

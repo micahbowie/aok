@@ -1,0 +1,11 @@
+<% if @uids != nil %>
+  <% @uids.each do |uid| %>
+    <br>
+    <ul>
+      <li>
+        <p><%= link_to "Act of Kindness - #{uid.unique_id}", unique_identifier_path(uid.unique_id) %></p>
+    </li>
+    </ul>
+  <br>
+  <% end %>
+  <% end %>
